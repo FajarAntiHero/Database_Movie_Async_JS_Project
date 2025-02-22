@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 4px 5px 5px 5px rgba(97, 97, 97, 0.423);
+}
+
+.modal-content {
+    min-height: 50vh;
+}
+
+.modal-header {
+    padding: 0 1rem 0 1rem;
+    min-height: 50px;
+}
+
+.modal-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 30px;
+    border-radius: 1rem;
+    background: rgb(255,255,255);
+    /* transition: all ease-in-out .5s; */
+    animation-name: loadingPlaceholder;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.card-placeholder {
+    width: 100%;
+    border-radius: 1rem;
+    min-height: 1rem;
+    background: rgb(255,255,255);
+    /* transition: all ease-in-out .5s; */
+    animation-name: loadingPlaceholder;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes loadingPlaceholder {
+    0%{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(154,154,154,1) 25%, rgba(88,89,89,1) 50%);
+    }
+    25%{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 25%, rgba(154,154,154,1) 50%, rgba(88,89,89,1) 75%);
+    }
+    50%{
+        background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(154,154,154,1) 75%, rgba(88,89,89,1) 100%);
+    }
+    75%{
+        background: linear-gradient(90deg, rgba(88,89,89,1) 25%, rgba(255,255,255,1) 75%, rgba(154,154,154,1) 100%);
+    }
+    100%{
+        background: linear-gradient(90deg, rgba(154,154,154,1) 25%, rgba(88,89,89,1) 50%, rgba(255,255,255,1) 100%);
+    }
+}
